@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 import writingsPool from "../../writingsPool.js"
-import { generateEmbedding } from "../../../utils/llmHelpers.js"
+import { generateEmbedding } from "../../../llm/helpers.js"
 import { INSERT_CHUNK_QUERY } from "./seedUtils.js"
 
 // Unlike every other book under data/processed/bahaullah, this compilation

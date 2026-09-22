@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 import writingsPool from "../../writingsPool.js"
-import { generateEmbedding } from "../../../utils/llmHelpers.js"
+import { generateEmbedding } from "../../../llm/helpers.js"
 import { collectChunks, INSERT_CHUNK_QUERY } from "./seedUtils.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))

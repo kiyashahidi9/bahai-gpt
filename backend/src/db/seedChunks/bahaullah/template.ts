@@ -20,7 +20,7 @@ Create a file similar to seedPrayers.ts
 import path from "path"
 import { fileURLToPath } from "url"
 import writingsPool from "../../writingsPool.js"
-import { generateEmbedding } from "../../../utils/llmHelpers.js"
+import { generateEmbedding } from "../../../llm/helpers.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const CHUNKS_DIR = path.resolve(
