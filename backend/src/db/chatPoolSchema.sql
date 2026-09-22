@@ -1,5 +1,3 @@
-
-Schema · SQL
 -- Safe to re-run: uses IF NOT EXISTS guards throughout.
  
 -- ============================================================
