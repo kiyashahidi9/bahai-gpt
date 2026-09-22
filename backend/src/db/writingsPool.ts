@@ -3,11 +3,7 @@ import { Pool } from 'pg'
 import { PostgresError } from '../utils/customErrors.js'
 
 const writingsPool = new Pool({
-    user: config.VDB_USER,
-    host: config.VDB_HOST,
-    database: config.VDB_NAME,
-    password: config.VDB_PASSWORD,
-    port: config.VDB_PORT,
+    connectionString: config.WRITINGS_DATABASE_URL,
 })
 
 writingsPool.on('error', (error) => {
