@@ -1,0 +1,61 @@
+import writingsPool from "../db/writingsPool.js";
+import type { AugmentedInput, ChatHistory, RelevantChunks } from "../types/rag.js";
+import { generateEmbedding } from "./helpers.js";
+
+const TOP_K = 30
+
+export async function getRelevantChunks(query: string) {
+    const embeddedQuery = await generateEmbedding(query)
+    
+    const relevantChunks = await writingsPool.query(`
+            SELECT
+                author, book_title, section, content, source_url,
+                embedding <=> $1 AS distance
+            FROM bahai_writings
+            ORDER BY distance
+            LIMIT $2
+        `, [JSON.stringify(embeddedQuery), TOP_K])
+
+    return relevantChunks.rows
+}
+
+export function augmentInput(
+    userQuery: string,
+    chatHistory: ChatHistory, 
+    relevantChunks?: RelevantChunks
+): AugmentedInput {
+    let augmentedInput: AugmentedInput
+
+    if (relevantChunks) {
+        const context = relevantChunks.map((chunk, i) => {
+            return `
+                [Source ${i + 1}: ${chunk.author}, 
+                Book: "${chunk.book_title}" - Section: "${chunk.section}"
+                \n\n
+                ${chunk.content}
+                \n\n
+                Source URL: ${chunk.source_url}
+                ]
+            `
+        })
+        
+        augmentedInput = [
+            ...chatHistory,
+            {
+                role: 'user',
+                content: `Context from the Bahai writings:\n\n${context}\n\nUser Question: ${userQuery}`
+            }
+        ]
+    } else {
+        augmentedInput = [
+            ...chatHistory,
+            {
+                role: 'user',
+                content: `User Question: ${userQuery}`
+            }
+        ]
+    }
+
+
+    return augmentedInput
+}

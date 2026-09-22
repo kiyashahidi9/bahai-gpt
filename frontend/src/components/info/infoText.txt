@@ -1,0 +1,21 @@
+Hi!!!!!!
+
+Welcome to BahaiGPT
+
+I'm Kiya Shahidi, and I made this app because other AI models were giving me misinformed and inaccurate answers to my questions about my former religion, the Baha'i Faith. I hope that this app helps you on your search as it is with mine!
+
+This model draws directly from the Writings themselves, and puts them above it's own words.
+
+What can you do with it?
+- Explain the Baha'i view on a concept
+- Look for quotes on a concept
+- Look for a specific quote
+- History
+- Choose random quotes
+
+This model does NOT
+- Create prayers or writings
+- Misquote intentionally
+- Respond well to "yo"
+
+Enjoy!!! Thank you :))

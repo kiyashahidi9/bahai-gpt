@@ -1,0 +1,8 @@
+POST http://localhost:3000/api/llm/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmbHllcjEwNTkiLCJpYXQiOjE3ODk3NjcwNzUsImV4cCI6MTc4OTg1MzQ3NX0.EQtumb-fRAvew2Unw-X6u6DpAN8RvhOq4TCO50Uoklk
+Content-Type: application/json
+
+{
+    "query": "what does bahaullah say about free will?",
+    "history": [{"role": "user", "content": "this is a test"}]
+}

@@ -1,0 +1,11 @@
+html {
+  font-size: 18px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fefdfc;
+  font-family: 'Source Serif 4', serif;
+}

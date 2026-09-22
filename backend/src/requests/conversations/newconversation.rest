@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/conversations/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmbHllcjEwNTkiLCJpYXQiOjE3ODk2OTE3NzIsImV4cCI6MTc4OTc3ODE3Mn0.ooKEK4zIbwttk64C9S7ec3ue7eVTA2HnBcQyt7OWkfk
+Content-Type: application/json
+
+{
+    "title": "this is my second conversation!"
+}
