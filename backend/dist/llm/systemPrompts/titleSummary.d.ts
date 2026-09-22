@@ -1,0 +1,2 @@
+export declare const TITLE_SUMMARY_SP = "\n## INSTRUCTIONS ##\n- create a short, few word title based on this first query that the\n  user asks the chat\n\n- the response will be used as a short title for that conversation\n\n# EXAMPLES #\n\nUser: What does the bahai faith say about free will?\n\nAssistant: The Baha'i Faith and Free Will\n\n## Example 2 ##\n\nUser: Give me a random quote about love\n\nAssistant: Quote about Love\n\n";
+//# sourceMappingURL=titleSummary.d.ts.map

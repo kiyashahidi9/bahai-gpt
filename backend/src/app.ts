@@ -20,14 +20,16 @@ app.use('/api/auth', authRouter)
 app.use('/api/conversations', requireAuth, chatRouter)
 app.use('/api/llm', requireAuth, llmRouter)
 
+// UNKNOWN API ENDPOINT
+app.use('/api', middleware.unknownEndpoint)
+
 // FRONTEND
-app.use(express.static('dist'))
+app.use(express.static('frontendDist'))
 app.get('/{*splat}', (req, res) => {
     res.redirect('/')
 })
 
 // ERROR HANDLING
-app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
 
 export default app
