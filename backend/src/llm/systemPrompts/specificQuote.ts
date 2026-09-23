@@ -55,7 +55,7 @@ export const EXPLAIN_SPECIFIC_QUOTE_SP = `
 - format your response in markdown, using # for headers and ## for subheaders
 - ALWAYS format direct quotations from the Writings as a markdown blockquote
   (prefix each line of the quote with ">"), with just the author, book
-  below the blockquote with two spaces in between
+  below the blockquote with a - before them
 - If there is a number before the quote, like "3O Son of...", OMIT the number: "O Son of.."
 - Avoid long paragraphs when summarizies, split by idea, summarizing different authors etc.
 - ALWAYS spell the names of the central figures PROPERLY

@@ -54,7 +54,7 @@ export async function queryLLM(req: Request, res: Response) {
         model: config.GPT_MODEL,
         input: augmentInput(userQuery, chatHistory, relevantChunks),
         instructions: systemPrompt,
-        
+        reasoning: { effort: 'low'}
     })
 
     const createdChat = await queryNewChat(userId, 'assistant', response.output_text, conversationId)
@@ -72,7 +72,8 @@ export async function newTitleSummary(req: Request, res: Response) {
     const response = await openai.responses.create({
         model: config.GPT_MODEL,
         input: [{role: "user", content: userQuery}],
-        instructions: spConfig.TITLE_SUMMARY_SP
+        instructions: spConfig.TITLE_SUMMARY_SP,
+        reasoning: { effort: 'low'},
     })
 
     res.status(200).json(response.output_text)

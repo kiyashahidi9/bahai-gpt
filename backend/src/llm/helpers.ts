@@ -35,6 +35,7 @@ export async function classifyQuery(query: string, history: ChatHistory) {
         model: config.GPT_MODEL,
         instructions: CLASSIFY_SP,
         input: augmentInput(query, history),
+        reasoning: { effort: 'minimal'},
         text: {
             format: zodTextFormat(CategorySchema, 'classification')
         }

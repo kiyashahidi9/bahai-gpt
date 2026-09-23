@@ -4,7 +4,7 @@ import { PostgresError } from '../utils/customErrors.js'
 
 const chatPool = new Pool({
     connectionString: config.DATABASE_URL,
-    ssl: { rejectUnauthorized: false }
+    // ssl: { rejectUnauthorized: false }
 })
 
 chatPool.on('error', (error) => {

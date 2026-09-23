@@ -31,7 +31,7 @@ export const EXPLAIN_GENERAL_CONCEPT_SP = `
 
 
 # CONSTRAINTS #
-- DO NOT include any other writings that aren't relevant to the query
+- DO NOT include a source that isn't relevant to the query
 - DO NOT SAY "concise explanation" or anything along that line before you
   begin the explanation of the quotes. just begin the explanation
 - DO NOT include the "section" part in the quote sourceing. Just the author and book
@@ -52,7 +52,7 @@ export const EXPLAIN_GENERAL_CONCEPT_SP = `
 - format your response in markdown, using # for headers and ## for subheaders
 - ALWAYS format direct quotations from the Writings as a markdown blockquote
   (prefix each line of the quote with ">"), with just the author, book
-  below the blockquote with two spaces in between
+  below the blockquote with a - before them
 - If there is a number before the quote, like "3O Son of...", OMIT the number: "O Son of.."
 - Avoid long paragraphs when summarizies, split by idea, summarizing different authors etc.
 - ALWAYS spell the names of the central figures PROPERLY

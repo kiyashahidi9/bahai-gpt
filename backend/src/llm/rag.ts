@@ -2,7 +2,7 @@ import writingsPool from "../db/writingsPool.js";
 import type { AugmentedInput, ChatHistory, RelevantChunks } from "../types/rag.js";
 import { generateEmbedding } from "./helpers.js";
 
-const TOP_K = 30
+const TOP_K = 12
 
 export async function getRelevantChunks(query: string) {
     const embeddedQuery = await generateEmbedding(query)
