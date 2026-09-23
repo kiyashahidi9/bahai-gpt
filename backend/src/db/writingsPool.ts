@@ -4,7 +4,7 @@ import { PostgresError } from '../utils/customErrors.js'
 
 const writingsPool = new Pool({
     connectionString: config.WRITINGS_DATABASE_URL,
-    // ssl: { rejectUnauthorized: false }
+    ssl: { rejectUnauthorized: false }
 })
 
 writingsPool.on('error', (error) => {
